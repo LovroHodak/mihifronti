@@ -1,0 +1,47 @@
+.bestSeller {
+    border: 2px solid violet;
+}
+
+.div1 {
+    width: 50%;
+    height: 200px;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/23/00/56/bathroom-1851566_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.div2 {
+    width: 50%;
+    height: 200px;
+    background-image: url('https://cdn.pixabay.com/photo/2021/03/09/20/29/indoor-plant-tools-6082796_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.div3 {
+    width: 50%;
+    height: 200px;
+    background-image: url('https://cdn.pixabay.com/photo/2018/06/12/19/59/football-3471371_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.div4 {
+    width: 50%;
+    height: 200px;
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/28/19/11/marijuana-2690984_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,25 @@
+.Navv {
+    border: 2px solid blue;
+
+    background-color: navy;
+}
+
+.logo {
+    text-align: center;
+    color: oldlace;
+    margin: 10px auto;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    color: seashell;
+    margin-top: 10px;
+}
+
+.categories > h4 {
+    border: 2px solid blue;
+    width: 150px;
+    text-align: center;
+}
+
