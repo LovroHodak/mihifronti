@@ -1,21 +1,5 @@
 .Home {
-    border: 2px solid red;
-
-    margin-bottom: 70px;
+    margin: auto auto 70px auto;
     max-width: 1200px;
-
-    margin: auto;
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
-}
-
-.sliderz {
-
-}
-
-.bestSellerz {
-
 }
 
