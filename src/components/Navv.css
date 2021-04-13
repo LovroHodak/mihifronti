@@ -2,13 +2,30 @@
   background-color: navy;
   max-width: 1200px;
   margin: auto auto 15px auto;
+  position: sticky;
+  top: 0;
+  z-index: 1090;
+}
+
+.navTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 5px;
 }
 
 .logo {
-  text-align: center;
-  color: oldlace;
-  margin: 10px auto;
   font-weight: bold;
+  font-size: 60px;
+  color: oldlace;
+}
+
+.cart {
+  color: oldlace;
+}
+
+.info {
+  color: oldlace;
 }
 
 .categories {
@@ -22,4 +39,31 @@
   border: 2px solid blue;
   width: 150px;
   text-align: center;
+}
+
+@media (max-width: 530px) {
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .cart,
+  .info {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .info {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .navTitle {
+    flex-wrap: wrap;
+  }
 }
