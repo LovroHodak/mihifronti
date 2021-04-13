@@ -1,9 +1,21 @@
 .Home {
     border: 2px solid red;
-    height: 100%;
 
-    display: flex;
+    margin-bottom: 70px;
+    max-width: 1200px;
+
+    margin: auto;
+
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around; */
+}
+
+.sliderz {
+
+}
+
+.bestSellerz {
+
 }
 

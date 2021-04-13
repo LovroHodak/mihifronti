@@ -1,7 +1,18 @@
 .Footer {
-    border: 2px solid tomato;
+  border: 2px solid tomato;
 
-    background-color: navy;
-    text-align: center;
-    color: oldlace;
+  background-color: navy;
+  text-align: center;
+  color: oldlace;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  height: 70px;
+
+  max-width: 1200px;
+  /* to center footer - i couldnt use (margin: auto) because (position: absolute) */
+  left: 50%;
+  transform: translateX(-50%);
 }

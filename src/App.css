@@ -5,7 +5,12 @@
   min-height: 100vh;
   box-sizing: border-box;
 
+  position: relative;
+
+  background-color: navy;
+  
+/* 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
 }

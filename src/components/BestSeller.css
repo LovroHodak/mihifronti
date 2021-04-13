@@ -1,4 +1,48 @@
 .bestSeller {
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.btnz {
+    border-radius: 7px;
+    font-size: 20px;
+    width: 80%;
+    margin: 5px;
+}
+
+.pair {
+    display: flex;
+}
+
+.innerDiv {
+    background-color: navy;
+    color: white;
+    width: 100%;
+    margin: 10px;
+    /* border: 2px solid white; */
+}
+
+.infoBS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerDiv > img {
+    width: 100%;
+}
+
+
+
+
+/* .bestSeller {
     border: 2px solid violet;
 }
 
@@ -44,4 +88,4 @@
 
     display: flex;
     align-items: center;
-}
+} */

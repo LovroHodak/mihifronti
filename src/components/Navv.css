@@ -2,12 +2,17 @@
     border: 2px solid blue;
 
     background-color: navy;
+
+    max-width: 1200px;
+
+    margin: auto;
 }
 
 .logo {
     text-align: center;
     color: oldlace;
     margin: 10px auto;
+    font-weight: bold;
 }
 
 .categories {

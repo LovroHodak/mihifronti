@@ -4,13 +4,15 @@ import "./Slider.css";
 import { Carousel } from "react-bootstrap";
 
 export default function Slider() {
+
+  
   return (
     <div className="slider">
       <Carousel>
-        <Carousel.Item>
+        <Carousel.Item className='carousel'>
           <img
-            className="d-block w-100"
-            src="https://cdn.pixabay.com/photo/2016/05/24/13/29/olive-oil-1412361_960_720.jpg"
+            className="d-block w-100  imgg"
+            src="https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80"
             alt="Kitchen slide"
           />
           <Carousel.Caption>
@@ -18,10 +20,10 @@ export default function Slider() {
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item className='carousel'>
           <img
-            className="d-block w-100"
-            src="https://cdn.pixabay.com/photo/2017/07/30/23/59/garlic-2556022_960_720.jpg"
+            className="d-block w-100  imgg"
+            src="https://images.unsplash.com/photo-1547854760-f580559a870e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80"
             alt="Second slide"
           />
 
@@ -30,10 +32,10 @@ export default function Slider() {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item className='carousel'>
           <img
-            className="d-block w-100"
-            src="https://cdn.pixabay.com/photo/2014/11/17/13/17/crossfit-534615_960_720.jpg"
+            className="d-block w-100  imgg"
+            src="https://images.unsplash.com/photo-1605666711391-4797967287aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80"
             alt="Third slide"
           />
 
@@ -44,10 +46,10 @@ export default function Slider() {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item className='carousel'>
           <img
-            className="d-block w-100"
-            src="https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_960_720.jpg"
+            className="d-block w-100 imgg"
+            src="https://images.unsplash.com/photo-1539601591461-2a5e0edb6915?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80"
             alt="First slide"
           />
           <Carousel.Caption>
