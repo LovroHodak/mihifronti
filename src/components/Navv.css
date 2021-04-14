@@ -48,14 +48,15 @@
 .categories {
   display: flex;
   justify-content: space-around;
-  color: seashell;
+  
   margin-top: 10px;
 }
 
-.categories > h4 {
+.links {
   border: 2px solid blue;
   width: 150px;
   text-align: center;
+  color: seashell;
 }
 
 @media (max-width: 530px) {

@@ -1,12 +1,13 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./HamburgerNav.css";
+import { Link } from "react-router-dom";
 
 export default function HamburgerNav() {
   return (
-    <Navbar bg="navy" variant="dark" expand="lg">
+    <Navbar collapseOnSelect bg="navy" variant="dark" expand="lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Brand href="#home">
+      <Navbar.Brand  as={Link} to="/cart">
         <div className="cart">
           <img
             className="cartImg"
@@ -20,10 +21,18 @@ export default function HamburgerNav() {
       </Navbar.Brand>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#kuhinja">Kuhinja</Nav.Link>
-          <Nav.Link href="#vrt">Vrt</Nav.Link>
-          <Nav.Link href="#sport">Sport</Nav.Link>
-          <Nav.Link href="#relax">Relax</Nav.Link>
+          <Nav.Link eventKey="1" as={Link} to="/kuhinja">
+            Kuhinja
+          </Nav.Link>
+          <Nav.Link eventKey="2" as={Link} to="/vrt">
+            Vrt
+          </Nav.Link>
+          <Nav.Link eventKey="3" as={Link} to="/sport">
+            Sport
+          </Nav.Link>
+          <Nav.Link eventKey="4" as={Link} to="/relax">
+            Relax
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
