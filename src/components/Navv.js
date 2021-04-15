@@ -2,6 +2,7 @@ import React from "react";
 import HamburgerNav from "./HamburgerNav";
 import "./Navv.css";
 import { Link } from "react-router-dom";
+import { Button } from 'react-bootstrap'
 
 export default function Navv() {
   return (
@@ -25,19 +26,11 @@ export default function Navv() {
         </Link>
       </div>
 
-      <div className="categories">
-        <Link to="/kuhinja" className="links">
-          <h4>Kuhinja</h4>
-        </Link>
-        <Link to="/vrt" className="links">
-          <h4>Vrt</h4>
-        </Link>
-        <Link to="/sport" className="links">
-          <h4>Sport</h4>
-        </Link>
-        <Link to="/relax" className="links">
-          <h4>Relax</h4>
-        </Link>
+      <div className='bootCat'>
+        <Button as={Link} to="/kuhinja" className='bootBtn' variant="primary">Kuhinja</Button>
+        <Button as={Link} to="/vrt" className='bootBtn' variant="primary">Vrt</Button>
+        <Button as={Link} to="/sport" className='bootBtn' variant="primary">Sport</Button>
+        <Button as={Link} to="/relax" className='bootBtn' variant="primary">Relax</Button>
       </div>
       <div className="hamham">
         <HamburgerNav />

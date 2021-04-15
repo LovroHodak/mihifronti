@@ -15,6 +15,10 @@
 
 .oneCard {
   width: 18rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px;
+}
+
+.kuhNaslov {
+  color: aliceblue;
+  text-align: center;
 }

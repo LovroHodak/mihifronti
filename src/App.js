@@ -6,6 +6,7 @@ import Navv from "./components/Navv";
 import Footer from "./components/Footer";
 import Kuhinja from "./components/Kuhinja";
 import { MyProvider } from "./MyContext";
+import Detail from "./components/Detail";
 
 function App() {
   return (
@@ -25,6 +26,13 @@ function App() {
             path="/kuhinja"
             render={() => {
               return <Kuhinja />;
+            }}
+          />
+          <Route
+            exact
+            path="/detail"
+            render={() => {
+              return <Detail />;
             }}
           />
         </Switch>

@@ -1,0 +1,94 @@
+.detail {
+  margin: auto auto 70px auto;
+  max-width: 1200px;
+}
+
+.detailTop {
+  display: flex;
+  margin: 5px;
+}
+
+.detSlider {
+  width: 70%;
+}
+
+.detailInfo {
+  margin: 30px;
+}
+
+.detailInfo > h1 {
+  color: aliceblue;
+  font-size: 50px;
+  margin: 30px;
+}
+
+.detailInfo > p {
+  color: azure;
+  font-size: 30px;
+  margin: 30px;
+}
+
+.divBtn {
+  margin: 30px;
+}
+
+.divBtn > Button {
+  margin: 2px;
+  width: 45%;
+}
+
+.longDesc {
+  color: azure;
+  margin: 25px 5px;
+  font-size: 25px;
+}
+
+@media (max-width: 1000px) {
+  .detailTop {
+    flex-direction: column;
+  }
+  .detSlider {
+    width: 100%;
+  }
+  .longDesc {
+    margin: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .detailInfo {
+    margin: 15px 15px 0 15px;
+  }
+
+  .detailInfo > h1 {
+    color: aliceblue;
+    font-size: 40px;
+    margin: 15px;
+  }
+
+  .detailInfo > p {
+    color: azure;
+    font-size: 30px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .detailInfo > h1 {
+    color: aliceblue;
+    font-size: 25px;
+    margin: 15px;
+  }
+
+  .detailInfo > p {
+    color: azure;
+    font-size: 20px;
+    margin: 20px;
+  }
+  .longDesc {
+    font-size: 20px;
+  }
+  .divBtn {
+    margin: 10px 10px 5px 10px;
+  }
+}
