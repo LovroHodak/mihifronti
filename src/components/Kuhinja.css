@@ -1,7 +1,20 @@
 .kuhinja {
-    border: 2px solid red;
-    color: white;
+  margin: auto auto 70px auto;
+  max-width: 1200px;
+}
 
-    margin: auto auto 70px auto;
-    max-width: 1200px;
+.featCard {
+  margin: 5px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.oneCard {
+  width: 18rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
