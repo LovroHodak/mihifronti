@@ -31,9 +31,9 @@ function App() {
           />
           <Route
             exact
-            path="/detail"
-            render={() => {
-              return <Detail />;
+            path="/detail/:id"
+            render={(routeProps) => {
+              return <Detail {...routeProps} />;
             }}
           />
           <Route

@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import "./Kuhinja.css";
 import { Card, Button } from "react-bootstrap";
 import { MyContext } from "../MyContext";
-import { kuhinjaItems } from "../fakeData/data";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function Kuhinja() {
   const [
@@ -34,21 +33,25 @@ export default function Kuhinja() {
       </Card>
 
       <div className="cards">
-        {kuhinjaItems.map((product, i) => {
-          return (
-            <Card key={i} className="oneCard">
-              <Card.Img
-                variant="top"
-                src={product.fotoImg[0]}
-                alt={product.name}
-              />
-              <Card.Body>
-                <Card.Title>{product.name}</Card.Title>
-                <Card.Text>{product.shortDesc}</Card.Text>
-                <Button as={Link} to="/detail" variant="primary">View More</Button>
-              </Card.Body>
-            </Card>
-          );
+        {kuhProduct.map((product, i) => {
+          if (product.category === "Kuhinja") {
+            return (
+              <Card key={i} className="oneCard">
+                <Card.Img
+                  variant="top"
+                  src={product.fotoImg}
+                  alt={product.name}
+                />
+                <Card.Body>
+                  <Card.Title>{product.name}</Card.Title>
+                  <Card.Text>{product.shortDesc}</Card.Text>
+                  <Button as={Link} to={`/detail/${product._id}`} variant="primary">
+                    View More
+                  </Button>
+                </Card.Body>
+              </Card>
+            );
+          }
         })}
       </div>
     </div>

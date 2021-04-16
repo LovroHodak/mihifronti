@@ -11,7 +11,7 @@ export const MyProvider = (props) => {
   const [sliderInfo, setSliderInfo] = useState([]);
   const [bestTop, setBestTop] = useState(BSDataTop);
   const [bestBottom, setBestBottom] = useState(BSDataBottom);
-  const [kuhProduct, setKuhProduct] = useState(kuhinjaItems);
+  const [kuhProduct, setKuhProduct] = useState([]);
 
   useEffect(() => {
     axios
@@ -23,6 +23,18 @@ export const MyProvider = (props) => {
       .catch((err) => {
         console.log("this is error: ", err);
       });
+
+      axios
+      .get("http://localhost:5000/api/product", { withCredentials: true })
+      .then((response) => {
+        setKuhProduct(response.data);
+        console.log(response.data)
+      })
+      .catch((err) => {
+        console.log("this is error: ", err);
+      });
+
+      
   }, []);
 
   return (
