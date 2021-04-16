@@ -1,0 +1,11 @@
+.cartScreen {
+    border: 2px solid red;
+
+    margin: auto auto 70px auto;
+    max-width: 1200px;
+}
+
+.cartScreen > h1 {
+    color: aliceblue;
+    text-align: center;
+}

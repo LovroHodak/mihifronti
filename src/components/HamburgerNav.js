@@ -33,6 +33,9 @@ export default function HamburgerNav() {
           <Nav.Link eventKey="4" as={Link} to="/relax">
             Relax
           </Nav.Link>
+          <Nav.Link eventKey="5" as={Link} to="/drugo">
+            Drugo
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

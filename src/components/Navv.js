@@ -31,6 +31,7 @@ export default function Navv() {
         <Button as={Link} to="/vrt" className='bootBtn' variant="primary">Vrt</Button>
         <Button as={Link} to="/sport" className='bootBtn' variant="primary">Sport</Button>
         <Button as={Link} to="/relax" className='bootBtn' variant="primary">Relax</Button>
+        <Button as={Link} to="/drugo" className='bootBtn' variant="primary">Drugo</Button>
       </div>
       <div className="hamham">
         <HamburgerNav />

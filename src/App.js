@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Kuhinja from "./components/Kuhinja";
 import { MyProvider } from "./MyContext";
 import Detail from "./components/Detail";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -33,6 +34,13 @@ function App() {
             path="/detail"
             render={() => {
               return <Detail />;
+            }}
+          />
+          <Route
+            exact
+            path="/cart"
+            render={() => {
+              return <Cart />;
             }}
           />
         </Switch>
