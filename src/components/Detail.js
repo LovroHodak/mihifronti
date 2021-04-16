@@ -25,7 +25,7 @@ export default function Detail({ match }) {
         if (product._id === paramsId) {
           return (
             <div>
-              <div>
+              <div className='detailTop'>
                 <Carousel className="detSlider">
                   <Carousel.Item key={i}>
                     <img
