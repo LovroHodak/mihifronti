@@ -8,6 +8,10 @@ import Kuhinja from "./components/Kuhinja";
 import { MyProvider } from "./MyContext";
 import Detail from "./components/Detail";
 import Cart from "./components/Cart";
+import Vrt from "./components/Vrt";
+import Sport from "./components/Sport";
+import Relax from "./components/Relax";
+import Drugo from "./components/Drugo";
 
 function App() {
   return (
@@ -27,6 +31,34 @@ function App() {
             path="/kuhinja"
             render={() => {
               return <Kuhinja />;
+            }}
+          />
+          <Route
+            exact
+            path="/vrt"
+            render={() => {
+              return <Vrt />;
+            }}
+          />
+          <Route
+            exact
+            path="/sport"
+            render={() => {
+              return <Sport />;
+            }}
+          />
+          <Route
+            exact
+            path="/relax"
+            render={() => {
+              return <Relax />;
+            }}
+          />
+          <Route
+            exact
+            path="/drugo"
+            render={() => {
+              return <Drugo />;
             }}
           />
           <Route

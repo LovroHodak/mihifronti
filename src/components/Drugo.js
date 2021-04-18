@@ -4,7 +4,7 @@ import { Card, Button } from "react-bootstrap";
 import { MyContext } from "../MyContext";
 import { Link } from "react-router-dom";
 
-export default function Vrt() {
+export default function Drugo() {
   const [
     sliderInfo,
     setSliderInfo,
@@ -30,7 +30,7 @@ export default function Vrt() {
 
       <div className="cards">
         {allProducts.map((product, i) => {
-          if (product.category === "Vrt") {
+          if (product.category === "Drugo") {
             return (
               <Card key={i} className="oneCard">
                 <Card.Img

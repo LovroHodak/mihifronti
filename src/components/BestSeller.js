@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
 import "./BestSeller.css";
 import { MyContext } from "../MyContext";
+import { Link } from 'react-router-dom'
 
 export default function BestSeller() {
   const [
     sliderInfo,
     setSliderInfo,
-    bestTop,
-    setBestTop,
-    bestBottom,
-    setBestBottom,
+    allProducts,
+    setAllProducts,
+    BS2, 
+    setBS2,
+    BS3, 
+    setBS3
   ] = useContext(MyContext);
 
   return (
@@ -17,13 +20,13 @@ export default function BestSeller() {
       <h1 className="title">Best Sellers</h1>
 
       <div className="pair">
-        {bestTop.map((item) => {
+        {BS3.map((item) => {
           return (
             <div key={item.id} className="innerDiv">
-              <img src={item.itemImg} alt={item.itemName} />
+              <img src={item.fotoImg} alt={item.name} />
               <div className="infoBS">
-                <h1 className="name">{item.itemName}</h1>
-                <button className="btnz">Buy now</button>
+                <h1 className="name">{item.name}</h1>
+                <button className="btnz"><Link to={`/detail/${item._id}`}>Buy now</Link></button>
               </div>
             </div>
           );
@@ -31,13 +34,13 @@ export default function BestSeller() {
       </div>
 
       <div className="pair">
-        {bestBottom.map((item) => {
+        {BS2.map((item) => {
           return (
             <div key={item.id} className="innerDiv">
-              <img src={item.itemImg} alt={item.itemName} />
+              <img src={item.fotoImg} alt={item.name} />
               <div className="infoBS">
-                <h1 className="name">{item.itemName}</h1>
-                <button className="btnz">Buy now</button>
+                <h1 className="name">{item.name}</h1>
+                <button className="btnz"><Link to={`/detail/${item._id}`}>Buy now</Link></button>
               </div>
             </div>
           );

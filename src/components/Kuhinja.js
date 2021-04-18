@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Kuhinja.css";
+import "./KATEGORIJE.css";
 import { Card, Button } from "react-bootstrap";
 import { MyContext } from "../MyContext";
 import { Link } from "react-router-dom";
@@ -8,16 +8,12 @@ export default function Kuhinja() {
   const [
     sliderInfo,
     setSliderInfo,
-    bestTop,
-    setBestTop,
-    bestBottom,
-    setBestBottom,
-    kuhProduct,
-    setKuhProduct,
+    allProducts,
+    setAllProducts
   ] = useContext(MyContext);
 
   return (
-    <div className="kuhinja">
+    <div className="kategorije">
       {/* <h1 className='kuhNaslov'>Kuhinja</h1> */}
       <Card className="text-center featCard">
         <Card.Header>Featured</Card.Header>
@@ -33,7 +29,7 @@ export default function Kuhinja() {
       </Card>
 
       <div className="cards">
-        {kuhProduct.map((product, i) => {
+        {allProducts.map((product, i) => {
           if (product.category === "Kuhinja") {
             return (
               <Card key={i} className="oneCard">

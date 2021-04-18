@@ -8,12 +8,12 @@ export default function Detail({ match }) {
   const [
     sliderInfo,
     setSliderInfo,
-    bestTop,
-    setBestTop,
-    bestBottom,
-    setBestBottom,
-    kuhProduct,
-    setKuhProduct,
+    allProducts,
+    setAllProducts,
+    BS2, 
+    setBS2,
+    BS3, 
+    setBS3
   ] = useContext(MyContext);
 
 
@@ -21,7 +21,7 @@ export default function Detail({ match }) {
 
   return (
     <div className="detail">
-      {kuhProduct.map((product, i) => {
+      {allProducts.map((product, i) => {
         if (product._id === paramsId) {
           return (
             <div>

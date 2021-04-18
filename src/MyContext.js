@@ -1,40 +1,47 @@
 import React, { useState, createContext, useEffect } from "react";
 import axios from "axios";
-import {
-  BSDataTop,
-  BSDataBottom,
-  kuhinjaItems,
-} from "./fakeData/data";
 export const MyContext = createContext();
 
 export const MyProvider = (props) => {
   const [sliderInfo, setSliderInfo] = useState([]);
-  const [bestTop, setBestTop] = useState(BSDataTop);
-  const [bestBottom, setBestBottom] = useState(BSDataBottom);
-  const [kuhProduct, setKuhProduct] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
+  const [BS2, setBS2] = useState([]);
+  const [BS3, setBS3] = useState([]);
 
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/category", { withCredentials: true })
       .then((response) => {
         setSliderInfo(response.data);
-        console.log(response.data)
       })
       .catch((err) => {
         console.log("this is error: ", err);
       });
 
-      axios
+    axios
       .get("http://localhost:5000/api/product", { withCredentials: true })
       .then((response) => {
-        setKuhProduct(response.data);
-        console.log(response.data)
+        setAllProducts(response.data);
+
+        setBS3(
+          response.data
+            .sort((a, b) => {
+              return b.sold - a.sold;
+            })
+            .slice(0, 3)
+        );
+
+        setBS2(
+          response.data
+            .sort((a, b) => {
+              return b.sold - a.sold;
+            })
+            .slice(3, 5)
+        );
       })
       .catch((err) => {
         console.log("this is error: ", err);
       });
-
-      
   }, []);
 
   return (
@@ -42,11 +49,12 @@ export const MyProvider = (props) => {
       value={[
         sliderInfo,
         setSliderInfo,
-        bestTop,
-        setBestTop,
-        bestBottom,
-        setBestBottom,
-        kuhProduct, setKuhProduct
+        allProducts,
+        setAllProducts,
+        BS2, 
+        setBS2,
+        BS3, 
+        setBS3
       ]}
     >
       {props.children}
