@@ -9,3 +9,58 @@
     color: aliceblue;
     text-align: center;
 }
+
+.cartItems {
+    border: 2px solid yellow;
+
+    
+}
+
+.linkCart {
+    color: aliceblue;
+}
+
+.cartItem {
+    border: 2px solid violet;
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    margin: 5px;
+}
+
+.cartItem > h2 {
+    border: 2px solid green;
+    color: whitesmoke;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.cartItem > h1 {
+    border: 2px solid green;
+
+    text-align: center;
+    color: whitesmoke;
+    font-size: 50px;
+    margin: 0;
+}
+
+.itemImg {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cartItem > div {
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cartItem > div > Button {
+    width: 40%;
+    font-size: 20px;
+}
+

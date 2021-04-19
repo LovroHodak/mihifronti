@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import HamburgerNav from "./HamburgerNav";
 import "./Navv.css";
 import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap'
+import { MyContext } from "../MyContext";
 
 export default function Navv() {
+  const [
+    sliderInfo,
+    setSliderInfo,
+    allProducts,
+    setAllProducts,
+    BS2, 
+    setBS2,
+    BS3, 
+    setBS3,
+    addToCart,
+    deleteFromCart,
+    cart, 
+    setCart,
+    nrOfCartItems, setNrOfCartItems
+  ] = useContext(MyContext);
+
+  
   return (
     <div className="Navv">
       <div className="navTitle">
@@ -20,7 +38,8 @@ export default function Navv() {
                 "https://www.iconsdb.com/icons/preview/white/shopping-cart-xxl.png"
               }
             />
-            <h1>0</h1>
+            <h1>{nrOfCartItems}</h1>
+            
           
         </div>
         </Link>

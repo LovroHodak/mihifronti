@@ -10,12 +10,15 @@ export default function Detail({ match }) {
     setSliderInfo,
     allProducts,
     setAllProducts,
-    BS2, 
+    BS2,
     setBS2,
-    BS3, 
-    setBS3
+    BS3,
+    setBS3,
+    addToCart,
+    deleteFromCart,
+    cart,
+    setCart,
   ] = useContext(MyContext);
-
 
   let paramsId = match.params.id;
 
@@ -24,10 +27,10 @@ export default function Detail({ match }) {
       {allProducts.map((product, i) => {
         if (product._id === paramsId) {
           return (
-            <div>
-              <div className='detailTop'>
+            <div key={i}>
+              <div className="detailTop">
                 <Carousel className="detSlider">
-                  <Carousel.Item key={i}>
+                  <Carousel.Item>
                     <img
                       className="d-block w-100"
                       src={product.fotoImg}
@@ -40,8 +43,29 @@ export default function Detail({ match }) {
                   <p>Price: {product.price} €</p>
                   <p>In Stock: {product.stock}</p>
                   <div className="divBtn">
-                    <Button variant="primary">Add</Button>
-                    <Button variant="primary">Delete</Button>
+                    {product.stock > 0 ? (
+                      <Button
+                        onClick={() => addToCart(product._id)}
+                        variant="primary"
+                      >
+                        Add
+                      </Button>
+                    ) : (
+                      <></>
+                    )}
+                    {cart.map((item, i) => {
+                      if (item._id === product._id && item.stock > 0) {
+                        return (
+                          <Button
+                            key={i}
+                            onClick={() => deleteFromCart(product._id)}
+                            variant="primary"
+                          >
+                            Delete
+                          </Button>
+                        );
+                      }
+                    })}
                   </div>
                 </div>
               </div>
