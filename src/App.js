@@ -12,6 +12,8 @@ import Vrt from "./components/Vrt";
 import Sport from "./components/Sport";
 import Relax from "./components/Relax";
 import Drugo from "./components/Drugo";
+import SuccessPage from "./components/SuccessPage";
+import UserData from "./components/UserData";
 
 function App() {
   return (
@@ -73,6 +75,20 @@ function App() {
             path="/cart"
             render={() => {
               return <Cart />;
+            }}
+          />
+                              <Route
+            exact
+            path="/userData"
+            render={() => {
+              return <UserData />;
+            }}
+          />
+                    <Route
+            exact
+            path="/successPage"
+            render={() => {
+              return <SuccessPage />;
             }}
           />
         </Switch>
