@@ -22,18 +22,23 @@ export default function Cart() {
     setNrOfCartItems,
     total,
     setTotal,
-    soldHistory, setSoldHistory,
-    initial, setInitial
+    soldHistory,
+    setSoldHistory,
+    initial,
+    setInitial,
   ] = useContext(MyContext);
-
-
-
-
 
   return (
     <div className="cartScreen">
       {cart.length === 0 ? (
-        <h1>Your cart is empty..</h1>
+        <div className="empty">
+          <h1 className="emptyTitle">Your cart is empty..</h1>
+          <img
+            className="emptyImg"
+            alt="emptyCart"
+            src="https://www.finfunmermaid.com/static/version1615882237/frontend/bsp/bartleby/en_US/images/icons/ff-sad-empty-cart.svg"
+          />
+        </div>
       ) : (
         <div className="cartItems">
           {cart.map((item, i) => {
@@ -45,13 +50,14 @@ export default function Cart() {
                     {item.name}
                   </Link>
                 </h1>
-                <h2>{item.stock} x </h2>
-                <h2>{item.price} €</h2>
+                <h2>{item.stock} x {item.price} €</h2>
                 <div>
                   {allProducts.map((product, i) => {
                     if (item._id === product._id && product.stock > 0) {
                       return (
-                        <Button key={i} onClick={() => addToCart(item._id)}>Add</Button>
+                        <Button key={i} onClick={() => addToCart(item._id)}>
+                          Add
+                        </Button>
                       );
                     }
                   })}
@@ -70,14 +76,13 @@ export default function Cart() {
               calling extra attention to featured content or information.
             </p>
             <p style={{ textAlign: "center" }}>
-              <Button as={Link} to='/userData' variant="primary">
+              <Button as={Link} to="/userData" variant="primary">
                 Confirm
               </Button>
             </p>
           </Jumbotron>
         </div>
       )}
-
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function Slider() {
 
   return (
     <div className="slider" ref={target}>
-      <Carousel target={target.current}>
+      <Carousel target={target.current} >
         {sliderInfo.map((item, i) => {
           return (
             <Carousel.Item key={i}>

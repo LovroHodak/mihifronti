@@ -53,7 +53,7 @@ export default function Detail({ match }) {
                     ) : (
                       <></>
                     )}
-                    {cart.map((item, i) => {
+                    {/* {cart.map((item, i) => {
                       if (item._id === product._id && item.stock > 0) {
                         return (
                           <Button
@@ -65,7 +65,7 @@ export default function Detail({ match }) {
                           </Button>
                         );
                       }
-                    })}
+                    })} */}
                   </div>
                 </div>
               </div>

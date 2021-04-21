@@ -61,6 +61,7 @@ export const MyProvider = (props) => {
         const updatedProduct = {
           ...product,
           stock: product.stock - 1,
+          sold: product.sold + 1
         };
         return updatedProduct;
       }
@@ -106,6 +107,7 @@ export const MyProvider = (props) => {
         const updatedProduct = {
           ...product,
           stock: product.stock + 1,
+          sold: product.sold - 1
         };
         return updatedProduct;
       }

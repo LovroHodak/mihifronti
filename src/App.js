@@ -14,6 +14,7 @@ import Relax from "./components/Relax";
 import Drugo from "./components/Drugo";
 import SuccessPage from "./components/SuccessPage";
 import UserData from "./components/UserData";
+import Detail2 from "./components/Detail2";
 
 function App() {
   return (
@@ -70,6 +71,14 @@ function App() {
               return <Detail {...routeProps} />;
             }}
           />
+          
+          <Route
+            exact
+            path="/detail2"
+            render={(routeProps) => {
+              return <Detail2 />;
+            }}
+          />
           <Route
             exact
             path="/cart"
@@ -77,14 +86,14 @@ function App() {
               return <Cart />;
             }}
           />
-                              <Route
+          <Route
             exact
             path="/userData"
             render={() => {
               return <UserData />;
             }}
           />
-                    <Route
+          <Route
             exact
             path="/successPage"
             render={() => {

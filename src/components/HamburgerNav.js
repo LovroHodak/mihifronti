@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./HamburgerNav.css";
 import { Link } from "react-router-dom";
+import { MyContext } from "../MyContext";
 
 export default function HamburgerNav() {
+  const [
+    sliderInfo,
+    setSliderInfo,
+    allProducts,
+    setAllProducts,
+    BS2, 
+    setBS2,
+    BS3, 
+    setBS3,
+    addToCart,
+    deleteFromCart,
+    cart, 
+    setCart,
+    nrOfCartItems, setNrOfCartItems
+  ] = useContext(MyContext);
   return (
     <Navbar collapseOnSelect bg="navy" variant="dark" expand="lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -16,7 +32,7 @@ export default function HamburgerNav() {
               "https://www.iconsdb.com/icons/preview/white/shopping-cart-xxl.png"
             }
           />
-          <h1>0</h1>
+          <h1>{nrOfCartItems}</h1>
         </div>
       </Navbar.Brand>
       <Navbar.Collapse id="basic-navbar-nav">

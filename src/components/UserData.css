@@ -4,3 +4,30 @@
     margin: auto auto 70px auto;
     max-width: 1200px;
 }
+
+.formForm {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.controlForm {
+    margin-top: 30px;
+}
+
+.submitBtn {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.checkBox {
+    color: antiquewhite;
+}
+
+@media (max-width: 400px) {
+    .formForm {
+        width: 80%;
+    }
+  }
+  
