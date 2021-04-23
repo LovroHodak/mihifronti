@@ -28,7 +28,7 @@ export default function Detail({ match }) {
         const updateProduct = {
           ...product,
           fotoImg: product.fotoImg.map((foto) => {
-            if (foto.id !== fotoId) {
+            if (foto.active === true) {
               const updateActive = {
                 ...foto,
                 active: false,
@@ -74,11 +74,11 @@ export default function Detail({ match }) {
             <div key={i}  className="detail">
               <div className="detailTop">
                 <div className="detail2">
-                  <div>
+                  <div className='smalls'>
                     {product.fotoImg.map((foto, i) => {
                       if (foto.active === true) {
                         return (
-                          <div key={i}>
+                          <div key={i} className='innerDivImg'>
                             <img
                               src={foto.lnk}
                               className="smallActiveImg"
@@ -89,7 +89,7 @@ export default function Detail({ match }) {
                         );
                       }
                       return (
-                        <div>
+                        <div  key={i}  className='innerDivImg'>
                           <img
                             src={foto.lnk}
                             className="smallNonactiveImg"
@@ -101,11 +101,11 @@ export default function Detail({ match }) {
                     })}
                   </div>
 
-                  <div style={{width: '75%'}}>
+                  <div className='biggs'>
                     {product.fotoImg.map((foto, i) => {
                       if (foto.active === true) {
                         return (
-                          <div key={i}>
+                          <div key={i} className='bigDivImg'>
                             <img
                               src={foto.lnk}
                               className="bigImg"

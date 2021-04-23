@@ -1,7 +1,5 @@
 .cartScreen {
-    border: 2px solid red;
-
-    margin: auto auto 70px auto;
+    margin: auto;
     max-width: 1200px;
 }
 
@@ -13,7 +11,7 @@
 
 .emptyTitle {
     color: antiquewhite;
-    margin-top: 15px;
+    margin: 15px 5px;
 }
 
 .emptyImg {
@@ -27,18 +25,12 @@
     text-align: center;
 }
 
-.cartItems {
-    border: 2px solid yellow;
-
-    
-}
 
 .linkCart {
     color: aliceblue;
 }
 
 .cartItem {
-    border: 2px solid violet;
     
     width: 100%;
     display: grid;
@@ -48,7 +40,6 @@
 }
 
 .cartItem > h2 {
-    border: 2px solid green;
     color: whitesmoke;
     font-size: 40px;
     text-align: center;
@@ -56,7 +47,6 @@
 }
 
 .cartItem > h1 {
-    border: 2px solid green;
 
     text-align: center;
     color: whitesmoke;
@@ -71,7 +61,6 @@
 }
 
 .cartItem > div {
-    border: 2px solid green;
     display: flex;
     justify-content: space-around;
 }
@@ -85,7 +74,6 @@
 
 @media (max-width: 840px) {
     .cartItem > h2 {
-        border: 2px solid green;
         color: whitesmoke;
         font-size: 30px;
         text-align: center;
@@ -93,7 +81,6 @@
     }
     
     .cartItem > h1 {
-        border: 2px solid green;
     
         text-align: center;
         color: whitesmoke;
@@ -109,6 +96,8 @@
     .cartItem {
         display: flex;
         flex-direction: column;
+        margin: 0;
+        
     }
     .cartItem > h2 {
         margin: 5px;

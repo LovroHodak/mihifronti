@@ -1,7 +1,6 @@
 .successPage {
-    border: 2px solid red;
 
-    margin: auto auto 70px auto;
+    margin: auto;
     max-width: 1200px;
 }
 

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import Home from "./components/Home";
 import Navv from "./components/Navv";
-import Footer from "./components/Footer";
+/* import Footer from "./components/Footer"; */
 import Kuhinja from "./components/Kuhinja";
 import { MyProvider } from "./MyContext";
 import Detail from "./components/Detail";
@@ -15,6 +15,7 @@ import Drugo from "./components/Drugo";
 import SuccessPage from "./components/SuccessPage";
 import UserData from "./components/UserData";
 import Detail2 from "./components/Detail2";
+/* import Admin from "./components/Admin"; */
 
 function App() {
   return (
@@ -71,14 +72,14 @@ function App() {
               return <Detail {...routeProps} />;
             }}
           />
-          
-          <Route
+
+          {/* <Route
             exact
             path="/detail2"
             render={(routeProps) => {
               return <Detail2 />;
             }}
-          />
+          /> */}
           <Route
             exact
             path="/cart"
@@ -100,8 +101,15 @@ function App() {
               return <SuccessPage />;
             }}
           />
+          {/* <Route
+            exact
+            path="/admin"
+            render={() => {
+              return <Admin />;
+            }}
+          /> */}
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </MyProvider>
   );

@@ -66,9 +66,10 @@ export default function UserData() {
         email: email,
         address: address,
         city: city,
-        cart: cart.map((item) => {
-          return `Item: ${item.name}, nrOfItems: ${item.stock}, price: ${item.price}€`;
-        }),
+        total: total,
+        cart: cart/* .map((item) => {
+          return `Item: ${item.name}, nrOfItems: ${item.stock}, price: ${item.price}€ `;
+        }), */
       },
     ]);
 

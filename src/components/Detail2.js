@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+/* import React, { useContext, useState } from "react";
 import { MyContext } from "../MyContext";
 import "./Detail2.css";
 
@@ -129,3 +129,4 @@ export default function Detail2() {
     </div>
   );
 }
+ */
