@@ -44,7 +44,7 @@ export default function Cart() {
           {cart.map((item, i) => {
             return (
               <div key={i} className="cartItem">
-                <img className="itemImg" src={item.fotoImg} alt={item.name} />
+                <img className="itemImg" src={item.fotoImg[0].lnk} alt={item.name} />
                 <h1>
                   <Link className="linkCart" to={`/detail/${item._id}`}>
                     {item.name}

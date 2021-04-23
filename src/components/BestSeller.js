@@ -23,7 +23,7 @@ export default function BestSeller() {
         {BS3.map((item) => {
           return (
             <div key={item.id} className="innerDiv">
-              <img src={item.fotoImg} alt={item.name} />
+              <img src={item.fotoImg[0].lnk} alt={item.name} />
               <div className="infoBS">
                 <h1 className="name">{item.name}</h1>
                 <button className="btnz"><Link to={`/detail/${item._id}`}>Buy now</Link></button>
@@ -37,7 +37,7 @@ export default function BestSeller() {
         {BS2.map((item) => {
           return (
             <div key={item.id} className="innerDiv">
-              <img src={item.fotoImg} alt={item.name} />
+              <img src={item.fotoImg[0].lnk} alt={item.name} />
               <div className="infoBS">
                 <h1 className="name">{item.name}</h1>
                 <button className="btnz"><Link to={`/detail/${item._id}`}>Buy now</Link></button>

@@ -35,7 +35,7 @@ export default function Sport() {
               <Card key={i} className="oneCard">
                 <Card.Img
                   variant="top"
-                  src={product.fotoImg}
+                  src={product.fotoImg[0].lnk}
                   alt={product.name}
                 />
                 <Card.Body>

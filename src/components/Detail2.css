@@ -3,14 +3,30 @@
 
     margin: auto auto 70px auto;
     max-width: 1200px;
+
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-.threeImages {
-    display: flex;
+.smallActiveImg {
+width: 120px;
+height: 90px;
+margin: 14px;
+cursor: pointer;
+transition: ease-in-out 0.5s;
 }
 
-.threeImages > img {
-    margin: 10px;
-}
+.smallNonactiveImg {
+    width: 120px;
+    height: 90px;
+    margin: 14px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: ease-in-out 0.5s;
+    }
+
+    .bigImg {
+        width: 600px;
+        height: 450px;
+        margin: 10px;
+    }

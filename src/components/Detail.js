@@ -22,22 +22,102 @@ export default function Detail({ match }) {
 
   let paramsId = match.params.id;
 
+  const setActive = (fotoId) => {
+    let newActive = allProducts.map((product) => {
+      if (product._id === paramsId) {
+        const updateProduct = {
+          ...product,
+          fotoImg: product.fotoImg.map((foto) => {
+            if (foto.id !== fotoId) {
+              const updateActive = {
+                ...foto,
+                active: false,
+              };
+              return updateActive;
+            }
+            return foto;
+          }),
+        };
+        return updateProduct;
+      }
+      return product;
+    });
+
+    let betterActive = newActive.map((product) => {
+      if (product._id === paramsId) {
+        const updateProduct = {
+          ...product,
+          fotoImg: product.fotoImg.map((foto) => {
+            if (foto.id === fotoId) {
+              const updateActive = {
+                ...foto,
+                active: true,
+              };
+              return updateActive;
+            }
+            return foto;
+          }),
+        };
+        return updateProduct;
+      }
+      return product;
+    });
+
+    setAllProducts(betterActive);
+  };
+
   return (
-    <div className="detail">
+    <div>
       {allProducts.map((product, i) => {
         if (product._id === paramsId) {
           return (
-            <div key={i}>
+            <div key={i}  className="detail">
               <div className="detailTop">
-                <Carousel className="detSlider">
-                  <Carousel.Item>
-                    <img
-                      className="d-block w-100"
-                      src={product.fotoImg}
-                      alt="ItemPhotos"
-                    />
-                  </Carousel.Item>
-                </Carousel>
+                <div className="detail2">
+                  <div>
+                    {product.fotoImg.map((foto, i) => {
+                      if (foto.active === true) {
+                        return (
+                          <div key={i}>
+                            <img
+                              src={foto.lnk}
+                              className="smallActiveImg"
+                              alt="smallFoto"
+                              onClick={() => setActive(foto.id)}
+                            />
+                          </div>
+                        );
+                      }
+                      return (
+                        <div>
+                          <img
+                            src={foto.lnk}
+                            className="smallNonactiveImg"
+                            alt="smallFoto"
+                            onClick={() => setActive(foto.id)}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div style={{width: '75%'}}>
+                    {product.fotoImg.map((foto, i) => {
+                      if (foto.active === true) {
+                        return (
+                          <div key={i}>
+                            <img
+                              src={foto.lnk}
+                              className="bigImg"
+                              alt="bigFoto"
+                            />
+                          </div>
+                        );
+                      }
+                    })}
+                  </div>
+                </div>
+
                 <div className="detailInfo">
                   <h1>{product.name}</h1>
                   <p>Price: {product.price} €</p>

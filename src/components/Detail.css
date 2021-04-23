@@ -1,3 +1,32 @@
+.detail2 {
+  width: 70%;
+
+  display: flex;
+}
+
+.smallActiveImg {
+  width: 120px;
+  height: 90px;
+  margin: 14px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.smallNonactiveImg {
+  width: 120px;
+  height: 90px;
+  margin: 14px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: ease-in-out 0.5s;
+}
+
+.bigImg {
+  width: 600px;
+  height: 450px;
+  margin: 10px;
+}
+
 .detail {
   margin: auto auto 70px auto;
   max-width: 1200px;
@@ -58,6 +87,9 @@
   .detSlider {
     width: 100%;
   }
+  .detail2 {
+    width: 100%;
+  }
   .longDesc {
     margin: 15px;
   }
@@ -83,8 +115,6 @@
     font-size: 18px;
   }
 }
-
-
 
 @media (max-width: 450px) {
   .detailInfo > h1 {
